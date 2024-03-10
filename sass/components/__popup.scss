@@ -8,6 +8,8 @@
   left: 0;
   background-color: rgba(black, 0.8);
   z-index: 9999;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: all 0.3s;
   &:target {
     opacity: 1;
