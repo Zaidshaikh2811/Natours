@@ -1,0 +1,56 @@
+.feature-box {
+  background-color: rgba($color-white, 0.8);
+  transition: all 0.3s;
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+
+  border-radius: 2px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+  &__icon {
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary,
+      $color-primary-dark
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+  }
+  &__text {
+  }
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+    box-shadow: 0rem 2rem 2rem rgba($color-black, 0.15);
+    transform: rotateX("180");
+  }
+}
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("/img/hero.jpg");
+  background-size: cover;
+  //  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  transform: skewY(-7deg);
+  margin-top: -15rem;
+  & > * {
+    transform: skewY(7deg);
+  }
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
