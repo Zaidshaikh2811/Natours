@@ -18,6 +18,9 @@
       color: $color-grey-dark-2;
     }
 
+    @include respond(tab-land) {
+      width: 100%;
+    }
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -46,6 +49,10 @@
   &__radio-group {
     width: 49%;
     display: inline-block;
+    @include respond(tab-land) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-label {

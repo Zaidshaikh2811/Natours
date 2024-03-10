@@ -70,4 +70,17 @@
     column-gap: 4rem;
     hyphens: auto;
   }
+  @include respond(tab-port) {
+    text-align: center;
+    &__content {
+      display: flex;
+    }
+    &__left {
+      display: flex;
+      width: 50%;
+    }
+    &__right {
+      width: 100%;
+    }
+  }
 }
